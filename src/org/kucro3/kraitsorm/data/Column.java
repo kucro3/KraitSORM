@@ -1,7 +1,7 @@
 package org.kucro3.kraitsorm.data;
 
 public interface Column {
-    public String name();
+    public String getName();
 
     public Class<?> getType();
 
