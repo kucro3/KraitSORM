@@ -1,4 +1,4 @@
-package org.kucro3.kraitsorm.annotations.addition;
+package org.kucro3.kraitsorm.addition;
 
 public enum Attribute {
     /**

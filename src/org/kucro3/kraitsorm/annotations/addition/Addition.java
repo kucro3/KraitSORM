@@ -1,5 +1,7 @@
 package org.kucro3.kraitsorm.annotations.addition;
 
+import org.kucro3.kraitsorm.addition.Attribute;
+
 import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)

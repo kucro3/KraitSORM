@@ -5,11 +5,16 @@ public interface Column {
 
     public Class<?> getType();
 
-    public boolean isCapable(Datum datum);
+    public default boolean isCapable(Datum datum)
+    {
+        return datum.getType().equals(getType());
+    }
 
     public boolean push(Datum datum);
 
     public Datum fetch();
 
     public boolean fetch(Datum datum);
+
+    public int ordinal();
 }
