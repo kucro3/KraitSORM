@@ -11,5 +11,7 @@ public interface Mapping {
 
     public List<MappedColumn> getColumns();
 
+    public MappedConstructor getConstructor();
+
     public int columnCount();
 }

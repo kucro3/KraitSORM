@@ -19,11 +19,15 @@ public class KraitMapperImpl implements Mapper {
 
     private class MappingImpl implements Mapping
     {
-        MappingImpl(Class<?> type, List<String> keys, List<MappedColumn> columns)
+        MappingImpl(Class<?> type,
+                    List<String> keys,
+                    List<MappedColumn> columns,
+                    MappedConstructor constructor)
         {
             this.type = type;
             this.keys = keys;
             this.columns = columns;
+            this.constructor = constructor;
         }
 
         @Override
@@ -55,6 +59,14 @@ public class KraitMapperImpl implements Mapper {
         {
             return columns.size();
         }
+
+        @Override
+        public MappedConstructor getConstructor()
+        {
+            return constructor;
+        }
+
+        private final MappedConstructor constructor;
 
         private final Class<?> type;
 
